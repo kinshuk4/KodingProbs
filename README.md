@@ -1,0 +1,14 @@
+# MultiProtocolDownloader
+A program that can be used to download data from multiple sources and protocols to local disk.
+
+The list of sources will be given as input in the form of urls (e.g. http://my.file.com/file, ftp://other.file.com/other, sftp://and.also.this/ending etc) The program should download all the sources, to a configurable location (file name should be uniquely determined from the url) and then exit. in your code, please consider: 1.The program should extensible to support different protocols  
+
+2.some sources might very big (more than memory)  
+
+3.some sources might be very slow, while others might be fast  
+
+4.some sources might fail in the middle of download  
+
+5.we don't want to have partial data in the final location in any case.  
+
+You can implement the code Scala or Java and also include tests.
