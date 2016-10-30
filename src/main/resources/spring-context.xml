@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="
+            http://www.springframework.org/schema/beans 
+            http://www.springframework.org/schema/beans/spring-beans-4.2.xsd
+            http://www.springframework.org/schema/context 
+            http://www.springframework.org/schema/context/spring-context-4.2.xsd
+">
+    <context:annotation-config />
+    <context:component-scan base-package="com.vaani.downloader"/>
+    
+    <context:property-placeholder 
+        location="classpath*:app.properties"
+        ignore-resource-not-found="false" ignore-unresolvable="false" file-encoding="utf-8" />
+
+    <bean id="downloadExecutor"
+          class="org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor">
+        <property name="maxPoolSize" value="${download.max.thread}" />
+        <property name="queueCapacity" value="${download.max.queue}" />
+        <property name="WaitForTasksToCompleteOnShutdown" value="true" />
+    </bean>
+    
+    <bean id="downloadManager" class="com.vaani.downloader.mq.DownloadManager" scope="prototype">
+        <constructor-arg name="maxThreads" value="${download.max.thread}"/>
+        <property name="downloadExecutor" ref="downloadExecutor"/>
+    </bean>    
+    
+    <bean id="downloadApplication" class="com.vaani.downloader.main.DownloadApp">
+        <property name="unmarshaller" ref="castorMarshaller" />
+    </bean>
+    <bean id="castorMarshaller" class="org.springframework.oxm.castor.CastorMarshaller">
+        <property name="mappingLocation" value="classpath:model-pojo-mapping.xml" />
+        <property name="targetClasses" value="com.vaani.downloader.config.AppConfig" />
+    </bean>
+    
+</beans>
