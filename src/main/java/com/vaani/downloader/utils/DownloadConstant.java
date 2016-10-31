@@ -1,6 +1,6 @@
 package com.vaani.downloader.utils;
 
-import com.vaani.downloader.constant.SupportedProtocol;
+import com.vaani.downloader.protocolhelper.SupportedProtocol;
 import org.apache.commons.lang3.EnumUtils;
 
 public class DownloadConstant {

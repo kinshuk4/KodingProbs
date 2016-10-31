@@ -1,4 +1,4 @@
-package com.vaani.downloader.constant;
+package com.vaani.downloader.protocolhelper;
 
 
 public enum SupportedProtocol {

@@ -9,6 +9,8 @@ import org.springframework.scheduling.concurrent.ThreadPoolTaskExecutor;
 import org.springframework.stereotype.Component;
 
 import java.io.IOException;
+import java.security.KeyManagementException;
+import java.security.NoSuchAlgorithmException;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -64,7 +66,13 @@ public class DownloadManager {
 
         downloadList.stream().forEach((config) -> {
             try {
-                DownloadWorker downloadWorker = new DownloadWorker(config);
+                DownloadWorker downloadWorker=null;
+				try {
+					downloadWorker = new DownloadWorker(config);
+				} catch (KeyManagementException | NoSuchAlgorithmException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
                 downloadExecutor.execute(downloadWorker);
 
             } catch (IOException ex) {

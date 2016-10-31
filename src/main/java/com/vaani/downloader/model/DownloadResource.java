@@ -1,10 +1,9 @@
 package com.vaani.downloader.model;
 
-import com.vaani.downloader.constant.SupportedProtocol;
+import com.vaani.downloader.protocolhelper.SupportedProtocol;
 import com.vaani.downloader.utils.DownloadConstant;
 import org.apache.commons.lang3.StringUtils;
 
-import com.vaani.downloader.utils.DownloadConstant;
 import org.apache.commons.lang3.builder.ReflectionToStringBuilder;
 
 

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <download-queue>
-    <num-downloads>2</num-downloads>
-    <download-list>
+    <num-downloads>4</num-downloads>
+   <download-list>
         <protocol>https</protocol>
         <hostname>www.csie.ntu.edu.tw</hostname>
-        <port>80</port>
+        <port>443</port>
         <targetFile>~kmchao/bcc03fall/chap08.ppt</targetFile>
         <outputFile>chap08.ppt</outputFile>
         <needAuthentication>false</needAuthentication>
@@ -16,5 +16,24 @@
         <targetFile>hakankutucu/CME222/algorithm.ppt</targetFile>
         <outputFile>algorithm.ppt</outputFile>
         <needAuthentication>false</needAuthentication>
+    </download-list> 
+    <download-list>
+        <protocol>ftp</protocol>
+        <hostname>speedtest.tele2.net</hostname>
+        <port>21</port>
+        <targetFile>512KB.zip</targetFile>
+        <outputFile>512KB.zip</outputFile>
+        <needAuthentication>false</needAuthentication>
+    </download-list>
+    <!-- demo:password@ -->
+    <download-list>
+        <protocol>sftp</protocol>
+        <hostname>test.rebex.net</hostname>
+        <port>22</port>
+        <username>demo</username>
+        <password>password</password>
+        <targetFile>readme.txt</targetFile>
+        <outputFile>readme2.txt</outputFile>
+        <needAuthentication>true</needAuthentication>
     </download-list>
 </download-queue>
