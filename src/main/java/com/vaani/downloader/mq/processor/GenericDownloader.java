@@ -37,7 +37,8 @@ public class GenericDownloader extends AbstractProtocolDownloader {
 			downloadHelper();
 		} catch (IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			cleanup(e);
+			
 		}
     }
 

@@ -16,9 +16,7 @@ import java.net.URL;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Created by kchandra on 31/10/16.
- */
+
 public class SftpDownloader  extends AbstractProtocolDownloader {
     final static Logger LOGGER = LoggerFactory.getLogger(DownloadManager.class);
     
@@ -69,7 +67,7 @@ public class SftpDownloader  extends AbstractProtocolDownloader {
 			downloadHelper();
 		} catch (JSchException | SftpException | IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			cleanup(e);
 		}
 	}
 

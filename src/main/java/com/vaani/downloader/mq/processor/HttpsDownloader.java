@@ -49,7 +49,7 @@ public class HttpsDownloader  extends AbstractProtocolDownloader {
 			downloadHelper();
 		} catch (KeyManagementException | NoSuchAlgorithmException | IOException e) {
 			// TODO Auto-generated catch block
-			e.printStackTrace();
+			cleanup(e);
 		}
 		
 	}
