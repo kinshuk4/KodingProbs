@@ -1,5 +1,6 @@
 package com.vaani.downloader.utils;
 
+import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.net.URL;
@@ -13,25 +14,34 @@ import org.slf4j.Logger;
 import com.vaani.downloader.model.DownloadResource;
 
 public class IOUtil {
-	private IOUtil(){
-		
+	private IOUtil() {
+
 	}
-	public static void downloadFromChannel(DownloadResource downloadResource, URL url, FileOutputStream fos, ReadableByteChannel rbc, Logger LOGGER) throws IOException{
-		try {
-            fos.getChannel().transferFrom(rbc, 0, Long.MAX_VALUE);
-            LOGGER.info("Downloading file {} from {} , total size: {} " ,
-                    downloadResource.getOutputFile(), url, fos.getChannel().size());
-        } catch (IOException ex) {
-            LOGGER.error(ex.getMessage());
-            Path path = Paths.get(downloadResource.getOutputFile());
-            try {
-                Files.delete(path);
-            } catch (IOException ex1) {
-                LOGGER.error(ex.getMessage(), ex1);
-            }
-            throw ex;
-        }
+
+	public static void downloadFromChannel(DownloadResource downloadResource, URL url, FileOutputStream fos,
+			ReadableByteChannel rbc, Logger LOGGER) throws IOException, InterruptedException {
+		int count = 0;
+		long bytesDownloaded = 0;
+		while (count < 5) {
+			try {				
+				fos.getChannel().transferFrom(rbc, bytesDownloaded, Long.MAX_VALUE);
+				LOGGER.info("Downloading file {} from {} , total size: {} ", downloadResource.getOutputFile(), url,
+						fos.getChannel().size());
+			} catch (IOException ex) {
+				count++;
+				
+				if(count==5)
+					throw ex;
+				LOGGER.error(ex.getMessage());
+				Thread.sleep(1000);
+				
+				File file = new File(downloadResource.getOutputFile());
+				
+				if(file.exists())
+					bytesDownloaded = file.length();				
+				
+			}
+		}
+
 	}
-	
-	
 }
