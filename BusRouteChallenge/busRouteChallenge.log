@@ -1,0 +1,38 @@
+19-11-2016 17:04:42 INFO  Application:15 - Application Started !
+19-11-2016 17:04:45 INFO  BusRouteService:62 - initBusRoute started with file path = src/main/resources/data.txt
+19-11-2016 17:04:45 DEBUG BusRouteService:78 - found 5 stations for route number: 0
+19-11-2016 17:04:45 DEBUG BusRouteService:78 - found 4 stations for route number: 1
+19-11-2016 17:04:45 DEBUG BusRouteService:78 - found 3 stations for route number: 2
+19-11-2016 17:04:45 DEBUG BusRouteService:82 - found 3 routes
+19-11-2016 17:04:46 INFO  BusRouteController:31 - BusRouteService called with parameter dep_sid = 1 and arr_sid = 2
+19-11-2016 17:04:46 INFO  BusRouteService:30 - searching for route with departureStationId = 1 and arrivalStationId = 2
+19-11-2016 17:04:46 DEBUG BusRouteService:39 - searching for route in 3 routes
+19-11-2016 17:04:46 DEBUG BusRouteService:46 - found route for departureStationId = 1 and arrivalStationId = 2
+19-11-2016 17:04:46 INFO  Response:29 - new Response created with dep_sid = 1 & arr_sid = 2 & isDirect_bus_route = true
+19-11-2016 18:46:06 INFO  Application:15 - Application Started !
+19-11-2016 18:46:10 INFO  BusRouteService:62 - initBusRoute started with file path = src/main/resources/data.txt
+19-11-2016 18:46:10 DEBUG BusRouteService:78 - found 5 stations for route number: 0
+19-11-2016 18:46:10 DEBUG BusRouteService:78 - found 4 stations for route number: 1
+19-11-2016 18:46:10 DEBUG BusRouteService:78 - found 3 stations for route number: 2
+19-11-2016 18:46:10 DEBUG BusRouteService:82 - found 3 routes
+19-11-2016 18:46:12 INFO  BusRouteController:31 - BusRouteService called with parameter dep_sid = 1 and arr_sid = 2
+19-11-2016 18:46:12 INFO  BusRouteService:30 - searching for route with departureStationId = 1 and arrivalStationId = 2
+19-11-2016 18:46:12 DEBUG BusRouteService:39 - searching for route in 3 routes
+19-11-2016 18:46:12 DEBUG BusRouteService:46 - found route for departureStationId = 1 and arrivalStationId = 2
+19-11-2016 18:46:12 INFO  Response:29 - new Response created with dep_sid = 1 & arr_sid = 2 & isDirect_bus_route = true
+19-11-2016 20:27:13 INFO  Application:15 - Application Started !
+19-11-2016 20:28:02 INFO  BusRouteController:32 - BusRouteService called with parameter dep_sid = 153 and arr_sid = 150
+19-11-2016 20:28:02 INFO  BusRouteService:70 - Siza0
+19-11-2016 20:28:02 INFO  Response:29 - new Response created with dep_sid = 153 & arr_sid = 150 & isDirect_bus_route = false
+19-11-2016 20:38:42 INFO  Application:15 - Application Started !
+19-11-2016 20:38:54 INFO  BusRouteController:32 - BusRouteService called with parameter dep_sid = 1 and arr_sid = 2
+19-11-2016 20:38:54 INFO  BusRouteService:70 - Siza0
+19-11-2016 20:38:54 INFO  Response:29 - new Response created with dep_sid = 1 & arr_sid = 2 & isDirect_bus_route = false
+19-11-2016 20:39:49 INFO  BusRouteController:32 - BusRouteService called with parameter dep_sid = 1 and arr_sid = 2
+19-11-2016 20:39:49 INFO  BusRouteService:70 - Siza0
+19-11-2016 20:39:49 INFO  Response:29 - new Response created with dep_sid = 1 & arr_sid = 2 & isDirect_bus_route = false
+19-11-2016 20:40:41 INFO  Application:15 - Application Started !
+19-11-2016 20:40:46 INFO  BusRouteController:32 - BusRouteService called with parameter dep_sid = 1 and arr_sid = 2
+19-11-2016 20:40:46 INFO  BusRouteService:70 - Siza3
+19-11-2016 20:40:46 DEBUG BusRouteService:85 - found route for departureStationId = [com.goeuro.model.BusStop@0, com.goeuro.model.BusStop@1, com.goeuro.model.BusStop@2, com.goeuro.model.BusStop@3, com.goeuro.model.BusStop@4] and arrivalStationId = [com.goeuro.model.BusStop@0, com.goeuro.model.BusStop@1, com.goeuro.model.BusStop@2, com.goeuro.model.BusStop@3, com.goeuro.model.BusStop@4]
+19-11-2016 20:40:46 INFO  Response:29 - new Response created with dep_sid = 1 & arr_sid = 2 & isDirect_bus_route = true
