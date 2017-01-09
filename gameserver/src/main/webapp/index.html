@@ -1,0 +1,61 @@
+	<!DOCTYPE html>
+	<html xmlns="http://www.w3.org/1999/xhtml">
+	<head>
+	<title>Junglee Game Server</title>
+	<meta content="text/html; charset=UTF-8" http-equiv="Content-Type">
+	<script src="resources/js/jquery-1.8.2.min.js" type="text/javascript"></script>
+	<script src="resources/js/script.js" type="text/javascript"></script>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+	</head>
+	<body>
+	<div class = "container">
+		<div id="beforelogin">
+			<br>
+				<!--<div id="logindiv">
+					<div class="panel panel-default">
+						  <div class="panel-heading">
+						    <h3 class="panel-title">Signin</h3>
+						  </div>
+						  <div class="panel-body">
+							<label for="username">Username</label> <input type="text" value="" id="username"/><input type="button" id="login" class="btn btn-default" value="login"/>
+						  </div>
+					</div>
+				</div>-->
+				<div class="logindiv row" style="margin-top: 100px">
+					<div class="panel panel-default">
+					  <div class="panel-heading">
+					    <h3 class="panel-title">Signin</h3>
+					  </div>
+					  <div class="panel-body">
+					    <form id="signin-form" class="form-horizontal">
+						  <div class="form-group">
+						    <label for="signin-email" class="col-sm-3 control-label">Name</label>
+						    <div class="col-sm-9">
+						      <input type="text" required class="form-control" id="username" placeholder="Name">
+						    </div>
+						  </div>
+						  <div class="form-group">
+						    <div class="col-sm-offset-3 col-sm-9">
+						      <button type="button" class="btn btn-primary" id="login">Sign in</button>
+						    </div>
+						  </div>
+						</form>
+					  </div>
+					</div>
+				</div>	
+		</div>
+		<div id="afterlogin">
+				<br>
+				<div id="creategamediv">
+					<input type="button" class="btn btn-primary" value="create game" id="creategame"/>
+				</div>
+			<hr>
+			<p><strong>Games</strong></p>
+				<div id="games">
+					
+				</div>
+
+		</div>
+	</div>
+	</body>
+	</html>
