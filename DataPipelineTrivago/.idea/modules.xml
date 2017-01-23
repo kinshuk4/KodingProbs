@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/GenericDataConverter.iml" filepath="$PROJECT_DIR$/GenericDataConverter.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TrivagoTest.iml" filepath="$PROJECT_DIR$/TrivagoTest.iml" />
+    </modules>
+  </component>
+</project>
