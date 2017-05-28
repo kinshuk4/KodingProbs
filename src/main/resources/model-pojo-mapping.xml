@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapping>
+    <class name="com.vaani.downloader.model.DownloadQueue">
+        <map-to xml="download-queue" />
+        <field name="numDownloads" type="integer" required="true">
+            <bind-xml name="num-downloads" node="element" />
+        </field>
+        <field name="downloadList" collection="arraylist" type="com.vaani.downloader.model.DownloadResource" required="true" >
+            <bind-xml name="download-list" node="element" />
+        </field>
+    </class>
+    <class name="com.vaani.downloader.model.DownloadResource">
+        <map-to xml="download-resource"/>
+        <field name="protocol" type="string" required="true">
+            <bind-xml name="protocol" node="element"/>
+        </field>
+        <field name="hostname" type="string" required="true">
+            <bind-xml name="hostname" node="element"/>
+        </field>
+        <field name="port" type="integer" required="true">
+            <bind-xml name="port" node="element"/>
+        </field>
+        <field name="targetFile" type="string" required="true">
+            <bind-xml name="targetFile" node="element"/>
+        </field>
+        <field name="outputFile" type="string" required="true">
+            <bind-xml name="outputFile" node="element"/>
+        </field>
+        <field name="needAuthentication" type="boolean">
+            <bind-xml name="needAuthentication" node="element"/>
+        </field>
+        <field name="username" type="string">
+            <bind-xml name="username" node="element"/>
+        </field>
+        <field name="password" type="string">
+            <bind-xml name="password" node="element"/>
+        </field>
+    </class>
+</mapping>
