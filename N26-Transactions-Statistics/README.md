@@ -1,0 +1,2 @@
+# Transaction Stattistics
+Spring boot application which aggregates the transaction statistics. I have used cache based on both Caffeine and ConcurrentHashMap. The application right now uses Caffeine based cache, but we can switch to ConcurrentHashMap based cache as well. This can be done in StatisticsServiceImpl, calling the factory with right cache type.
